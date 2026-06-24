@@ -1,0 +1,35 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";        
+        
+.reading-time,
+.view-count {
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        margin-right: rem(4);
+        width: rem(16);
+        height: rem(16);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.reading-time {
+    &::before {
+        background-image: url('/wp-content/themes/mobidev/src/images/icon-time.svg');
+    }
+}
+
+.view-count {
+    margin-left: rem(12);
+    
+    &::before {
+        background-image: url('/wp-content/themes/mobidev/src/images/icon-view.svg');
+    }
+}

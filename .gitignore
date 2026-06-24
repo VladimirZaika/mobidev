@@ -1,48 +1,30 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
-
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Configuration
-wp-config.php
-
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.idea/workspace.xml
+.idea/*
+.idea
+.idea/vcs.xml
+.idea/modules.xml
+.idea/maximarkets.site.iml
+*.zip
+*.rar
+*.gz
+*.sql
+*.tar
+/wp-content/themes/twenty*
+!/wp-content/themes/twentytwentyone
+/wp-content/plugins/wp-file-manager
+license.txt
+readme.html
+web.config
 *.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+wp-content/backup-db/
+wp-content/backups/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/db.php
+.tmb
+**/node_modules/
+wp-cli.phar
+/local-xdebuginfo.php
+.vscode

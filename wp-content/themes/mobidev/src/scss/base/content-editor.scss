@@ -1,0 +1,166 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";
+
+.section-single {
+    .content-wrapper {
+        & > :first-child {
+            margin-top: rem(32);
+        }
+
+        h1 {
+            margin-bottom: rem(24);
+            font-size: rem(32);
+            font-weight: 600;
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(40);
+            }
+        }
+
+        h2 {
+            font-size: rem(26);
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(32);
+            }
+        }
+
+        h3 {
+            font-size: rem(20);
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(24);
+            }
+        }
+
+        h4 {
+            font-size: rem(18);
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(20);
+            }
+        }
+
+        h5 {
+            font-size: rem(16);
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(18);
+            }
+        }
+
+        h6 {
+            font-size: rem(14);
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(16);
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: rem(32);
+            margin-bottom: rem(12);
+            font-weight: 600;
+        }
+
+        a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            border-radius: rem(16);
+            margin-top: rem(20);
+
+            &:not(:first-child) {
+                margin-top: rem(20);
+            }
+        }
+
+        p,
+        ul,
+        ol {
+            margin-top: rem(12);
+        }
+
+        ul,
+        ol {
+            margin-bottom: rem(20);
+
+            li {
+                position: relative;
+
+                &:not(:first-child) {
+                    margin-top: rem(8);
+                }
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                list-style: none;
+                padding-left: rem(16);
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: rem(8);
+                    width: rem(6);
+                    height: rem(6);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: var(--secondary-color);
+
+                    @media screen and (min-width: $tablet) {
+                        top: rem(6);
+                        width: rem(8);
+                        height: rem(8);
+                    }
+                }
+            }
+        }
+
+        ol {
+            padding-left: rem(20);
+
+            li {
+                padding-left: rem(12);
+            }
+        }
+
+        strong {
+            color: var(--text-color);
+        }
+
+        p,
+        span,
+        a,
+        li,
+        blockquote {
+            font-size: rem(14);
+
+            @media screen and (min-width: $tablet) {
+                font-size: rem(16);
+            }
+
+            @media screen and (min-width: $tablet-landscape) {
+                font-size: rem(18);
+            }
+        }
+    }
+}

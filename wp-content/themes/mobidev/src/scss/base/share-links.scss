@@ -1,0 +1,47 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins" as *;
+@use "sass:math";
+
+.share-links-wrapper {
+    margin-top: rem(32);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: rem(16);
+
+    .share-link,
+    .share-button {
+        @include flex_center;
+        width: rem(36);
+        height: rem(36);
+        border-radius: 50%;
+        outline-width: rem(1);
+        outline-style: solid;
+        outline-color: transparent;
+
+        @media screen and (min-width: $tablet) {
+            width: rem(44);
+            height: rem(44);
+        }
+
+        &:hover,
+        &:focus {
+            outline-color: var(--secondary-color);
+        }
+
+        .img-wrapper {
+            display: flex;
+            width: 100%;
+            min-height: unset;
+            max-height: none;
+            margin: 0;
+            border-radius: 0;
+
+            img {
+                margin: 0;
+            }
+        }
+    }
+}

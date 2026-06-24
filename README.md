@@ -1,2 +1,2 @@
-# mobidev
-wordpress, gutenberg, acf, js, php, css, gulp
+# mobiDev
+wordpress, gutenberg, acf, gravity form, js, php, css, gulp

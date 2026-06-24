@@ -1,0 +1,61 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins" as *;
+@use "sass:math";
+
+.float-msg-wrapper {
+    width: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    bottom: rem(24);
+    @include flex_center;
+    border-radius: rem(100);
+    padding: rem(8) rem(16);
+    overflow: hidden;
+    background-color: var(--optional-9-color);
+    border: rem(1) solid var(--text-color-75);
+    gap: rem(8);
+    transition: all 0.2s linear;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 120;
+
+    @media screen and (min-width: $tablet) {
+        bottom: rem(48);
+    }
+
+    @media screen and (min-width: $laptop) {
+        bottom: rem(56);
+    }
+
+    &.active {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    .icon-wrapper {
+        @include flex_center;
+        width: rem(24);
+        margin: 0;
+        min-height: unset;
+        max-height: unset;
+        height: auto;
+
+        img {
+            margin: 0 !important;
+        }
+    }
+}
+
+.float-msg-title {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: 0;
+
+    @media screen and (min-width: $tablet) {
+        font-size: rem(18);
+    }
+}

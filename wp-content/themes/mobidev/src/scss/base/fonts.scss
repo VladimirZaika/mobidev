@@ -1,0 +1,133 @@
+@use "sass:math";
+
+@font-face {
+	font-display: swap;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mobidev/fonts/Inter/Inter-Regular.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Regular.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Regular.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Regular.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/wp-content/themes/mobidev/fonts/Inter/Inter-Medium.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Medium.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Medium.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Medium.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/wp-content/themes/mobidev/fonts/Inter/Inter-SemiBold.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-SemiBold.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-SemiBold.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-SemiBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/wp-content/themes/mobidev/fonts/Inter/Inter-Bold.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Bold.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Bold.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Inter/Inter-Bold.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Regular.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Regular.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Medium.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Medium.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Medium.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-Medium.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-SemiBold.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-SemiBold.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-SemiBold.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Raleway/Raleway-SemiBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Light.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Light.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Light.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Regular.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Regular.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Medium.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Medium.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-SemiBold.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-SemiBold.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-SemiBold.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Bold.woff') format('woff'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Bold.ttf') format('truetype'),
+		url('/wp-content/themes/mobidev/fonts/Roboto/Roboto-Bold.otf') format('opentype');
+}

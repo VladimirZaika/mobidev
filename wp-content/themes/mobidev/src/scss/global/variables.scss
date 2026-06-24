@@ -1,0 +1,22 @@
+@use "functions" as *;
+@use "sass:math";
+
+$theme-url: '/wp-content/themes/kison';
+
+// Responsive
+$mobile: rem(559.98);
+$tablet: rem(767.98);
+$tablet-landscape: rem(1023.98);
+$laptop-mini: rem(1099.98);
+$laptop: rem(1239.98);
+$pc: rem(1439.98);
+$pc-wide: rem(1679.98);
+$wide: rem(1919.98);
+
+// Container
+$container-width: rem(1279.98);
+
+//Colors
+$white: #fff;
+$secondary: #B4BEFF;
+$grey: #7e7d7a;

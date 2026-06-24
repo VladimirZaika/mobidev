@@ -1,0 +1,113 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";
+@use '../../base/category';
+@use '../../base/post-card';
+
+.section-archive {
+    &.section-archive-top {
+        @media screen and (min-width: $tablet) {
+            padding-top: rem(60);
+        }
+    }
+
+    &.section-archive-grid {
+        padding-bottom: rem(80);
+
+        @media screen and (min-width: $tablet) {
+            padding-bottom: rem(120);
+        }
+
+        @media screen and (min-width: $tablet-landscape) {
+            padding-bottom: rem(160);
+        }
+    }
+
+    .text-wrapper {
+        width: 100%;
+        max-width: rem(850);
+    }
+
+    .title-wrapper {
+        &.grid-card-title-wrapper {
+            .h2,
+            h2 {
+                font-size: rem(24);
+
+                @media screen and (min-width: $tablet-landscape) {
+                    font-size: rem(40);
+                }
+            }
+        }
+
+        h1,
+        h3,
+        h5 {
+            margin-bottom: 0;
+        }
+    }
+
+    h1 {
+        @media screen and (min-width: $tablet-landscape) {
+            font-size: rem(64);
+        }
+    }
+
+    h5 {
+        font-size: rem(18);
+        font-weight: 600;
+
+        @media screen and (min-width: $tablet-landscape) {
+            font-size: rem(24);
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: rem(8);
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: rem(16);
+        }
+    }
+
+    p {
+        color: var(--text-color-75);
+    }
+
+    p,
+    ol,
+    ul,
+    address,
+    blockquote {
+        margin-top: rem(8);
+
+        @media screen and (min-width: $tablet) {
+            margin-top: rem(16);
+        }
+    }
+
+    .btn-wrapper {
+        &.load-more-btn-wrapper {
+            @include flex_center;
+            margin-top: rem(24);
+            width: 100%;
+
+            @media screen and (min-width: $tablet) {
+                margin-top: rem(32);
+            }
+
+            .button {
+                width: 100%;
+
+                @media screen and (min-width: $tablet) {
+                    width: auto;
+                }
+            } 
+        }
+    }
+}

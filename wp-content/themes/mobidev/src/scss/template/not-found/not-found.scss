@@ -1,0 +1,89 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";
+
+.error404 {
+    .main {
+        @media screen and (min-width: $wide) {
+            display: flex;
+        }
+    }
+}
+
+section {
+    &.section-not-found {
+        @media screen and (min-width: $tablet) {
+            padding: rem(40) 0;
+        }
+
+        @media screen and (min-width: $wide) {
+            display: flex;
+            align-items: stretch;
+            height: auto;
+        }
+
+        .not-found-container {
+            @include flex_center;
+            flex-direction: column;
+
+            .sudden-bg-wrapper {
+                left: 50%;
+                transform: translateX(-50%);
+                top: -80%;
+                min-width: rem(600);
+                height: auto;
+
+                @media screen and (min-width: $tablet) {
+                    top: rem(-108);
+                }
+
+                @media screen and (min-width: $tablet-landscape) {
+                    top: rem(-120);
+                    min-width: rem(1100);
+                    height: 100%;
+                }
+            }
+
+            .content-wrapper {
+                & > * {
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+
+            h1,
+            h2 {
+                line-height: 1;
+            }
+
+            h1 {
+                font-size: rem(140);
+
+                @media screen and (min-width: $tablet) {
+                    font-size: rem(260);
+                }
+
+                @media screen and (min-width: $tablet-landscape) {
+                    font-size: rem(320);
+                }
+            }
+
+            h2 {
+                font-size: rem(40);
+
+                @media screen and (min-width: $tablet) {
+                    font-size: rem(64);
+                }
+            }
+
+            .btn-wrapper {
+                display: flex;
+                margin-top: rem(24);
+
+                @media screen and (min-width: $tablet-landscape) {
+                    margin-top: rem(32);
+                }
+            }
+        }
+    }
+}

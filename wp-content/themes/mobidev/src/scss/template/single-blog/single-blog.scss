@@ -1,0 +1,111 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";
+@use '../../base/post-card';
+@use '../../base/share-links';
+@use '../../base/float-message';
+@use '../../base/content-editor';
+
+.single-post {
+    .wrapper {
+        overflow: hidden;
+
+        @media screen and (min-width: $tablet-landscape) {
+            overflow: unset;
+        }
+    }
+
+    .main {
+        overflow: unset;
+    }
+}
+
+.section-single-blog {
+    padding-top: rem(32);
+
+    @media screen and (min-width: $tablet) {
+        padding-top: rem(48);
+    }
+
+    @media screen and (min-width: $tablet-landscape) {
+        padding-top: rem(60);
+    }
+
+    .post-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-size: rem(32);
+        font-weight: 600;
+        
+        @media screen and (min-width: $tablet-landscape) {
+            font-size: rem(40);
+            font-weight: 700;
+        }
+    }
+
+    .info-wrapper {
+        display: flex;
+        gap: rem(24);
+        align-items: center;
+        justify-content: space-between;
+        margin-top: rem(12);
+
+        @media screen and (min-width: $tablet-landscape) {
+            margin-top: rem(16);
+        }
+
+        & > * {
+            color: var(--text-color-75);
+        }
+
+        .reading-time,
+        .view-count {
+            font-size: rem(14);
+            line-height: 1.1;
+        }
+
+        .post-date {
+            font-size: rem(14);
+
+            @media screen and (min-width: $tablet) {
+                font-size: rem(16);
+            }
+        }
+    }
+
+    .post-card {
+        &.related-article-card {
+            .info-wrapper {
+                .post-date {
+                    font-size: rem(14);
+                }
+            }
+        }
+    }
+
+    .img-wrapper {
+        border-radius: rem(20);
+        margin-top: rem(20);
+        overflow: hidden;
+        min-height: rem(199);
+
+        @media screen and (min-width: $tablet) {
+            margin-top: rem(24);
+        }
+
+        @media screen and (min-width: $pc) {
+            min-height: rem(400);
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

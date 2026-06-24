@@ -1,0 +1,66 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins" as *;
+@use "sass:math";
+
+.section-archive {
+    &.section-archive-top {
+        padding-bottom: 0;
+    }
+
+    &.section-archive-grid {
+        padding-top: rem(40);
+
+        @media screen and (min-width: $tablet-landscape) {
+            padding-top: rem(60);
+            padding-bottom: rem(80);
+        }
+
+        .btn-wrapper {
+            &.load-more-btn-wrapper {
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+
+    .eyebrow-wrapper {
+        margin-bottom: rem(16);
+    }
+}
+
+.filter-wrapper {
+    width: 100%;
+    margin-top: rem(32);
+
+    @media screen and (min-width: $tablet-landscape) {
+        margin-top: rem(48);
+    }
+}
+
+.filter-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(8);
+}
+
+.post-cards-wrapper {
+    display: grid;
+    width: 100%;
+    gap: rem(12);
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: rem(32);
+
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+    }
+
+    @media screen and (min-width: $tablet-landscape) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: rem(48);
+    }
+}
