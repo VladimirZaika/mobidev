@@ -507,7 +507,7 @@ a.button {
 }
 
 .container,
-.yoast-breadcrumbs {
+#crumbs {
     width: 100%;
     max-width: $container-width;
     position: relative;
@@ -667,7 +667,7 @@ section {
     opacity: 0.5;
 }
 
-.yoast-breadcrumbs {
+#crumbs {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -690,31 +690,29 @@ section {
         padding-top: rem(24);
     }
 
+    a,
     span {
-        a,
-        span {
-            font-size: rem(14);
+        font-size: rem(14);
+    }
+
+    a {
+        font-family: var(--body-font);
+    }
+    
+    span {
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        color: inherit;
+        padding-right: rem(6);
+
+        &:last-child {
+            padding-right: 0;
+            padding-left: rem(6);
         }
 
-        a {
-            font-family: var(--body-font);
-        }
-        
-        span {
-            font-family: inherit;
-            font-weight: inherit;
-            line-height: inherit;
-            color: inherit;
-            padding-right: rem(6);
-
-            &:last-child {
-                padding-right: 0;
-                padding-left: rem(6);
-            }
-
-            &.breadcrumb_last {
-                color: var(--secondary-color);
-            }
+        &.current {
+            color: var(--secondary-color);
         }
     }
 }

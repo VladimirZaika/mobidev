@@ -49,7 +49,7 @@ if ( $postThumbnailId ):
     ];
 endif;
 
-yoast_breadcrumbs_output(); ?>
+if (function_exists('custom_breadcrumbs')) custom_breadcrumbs(); ?>
 
 <section
     class="section-single section-<?php echo $sectionName; ?>"

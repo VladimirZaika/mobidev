@@ -20,7 +20,7 @@ $blockId = wp_unique_id('block-');
 $blockId_2 = wp_unique_id('grid-block-');
 $index = 0;
 
-yoast_breadcrumbs_output(); ?>
+if (function_exists('custom_breadcrumbs')) custom_breadcrumbs(); ?>
 
 <section
     class="section-<?= $sectionName; ?>-top section-<?= $sectionName . $sectionClass; ?>"
